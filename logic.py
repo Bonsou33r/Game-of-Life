@@ -7,13 +7,9 @@ while gen_auto > 1 or gen_auto < 0:
 size = int(input("What is the size of the grid you want? Size (in pixels): "))
 screen = pg.display.set_mode((size+5, size+5))
 running = True
+
 #def generate_grid():
 #    if gen_auto == 0:
-
-
 #def next_gen():
-
-
-
 #generate_grid()
 #next_gen()
