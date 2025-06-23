@@ -24,6 +24,7 @@ We need a package to make a grid which can be filled with dead or alive cells (N
 The programmation language is Python because it is simple. The package used to create the grid is NumPy, because it is fast (written in C) but also simple (thanks to its Python syntax). The package used for the UI is NiceGUI for now, but it might change in the future.
 
 Things to code:
+We need a grid, first.
 We need a noise generator so that the grid can be filled automatically.
 We need to implement the rules of the Game of Life. The rules are:
   - 1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
