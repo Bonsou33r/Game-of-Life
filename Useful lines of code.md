@@ -16,5 +16,3 @@ np.save(path, grid_array)
 ```
 
 Just make sure the directory exists first - Python won't create it automatically. Use `os.makedirs('grids', exist_ok=True)` to create it if needed.
-
-

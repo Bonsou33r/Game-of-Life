@@ -1,26 +1,28 @@
 # The plan
 
-*Organization :*
+#*Organization :*#
+
 For each level:
 - First step: define the precise objective of the project part with details
 - Second step: define the tools that will be useful or critical for the project
 - Third step: define what code is needed and make algorithms
 - Fourth step: code!
 
-*First step*
+#*First step*#
+
 Different levels :
-First level: develop a python program that can simulate the game of life (original John Conway's rules) with some settings like zoom in, add some cells, etc...
-Second level: make a Docker container in which the python program can run as an app.
-Third level: make a website with the integration of the Docker container in it so that the user of the website can visit several pages with explanations of the Game of Life, its story and of course the app we made.
-Fourth level: deploy this website and the Docker container on a local network so that every person connected to the local network can access and use the website.
+*First level:* develop a python program that can simulate the game of life (original John Conway's rules) with some settings like zoom in, add some cells, etc...
+*Second level:* make a Docker container in which the python program can run as an app.
+*Third level:* make a website with the integration of the Docker container in it so that the user of the website can visit several pages with explanations of the Game of Life, its story and of course the app we made.
+*Fourth level:* deploy this website and the Docker container on a local network so that every person connected to the local network can access and use the website.
 Fifth level: deploy this website on the Internet so that anybody in the world can access this website with all its content.
 
-*Second step*
-First level:
+#*Second step*#
+*First level:*
 We need Python, the latest version.
 We need a package to make a grid which can be filled with dead or alive cells (NumPy). We also need to implement some functionnalities, like adding alive or dead cells by clicking on the grid (matplotlib? NiceGUI for the GUI).
 
-*Third step*
+#*Third step*#
 The programmation language is Python because it is simple. The package used to create the grid is NumPy, because it is fast (written in C) but also simple (thanks to its Python syntax). The package used for the UI is NiceGUI for now, but it might change in the future.
 
 Things to code:
