@@ -1,0 +1,39 @@
+services:
+  game-of-life:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: conways-game-of-life
+    environment:
+      - DISPLAY=${DISPLAY}
+      - SDL_VIDEODRIVER=x11
+    volumes:
+      # Mount X11 socket for GUI support
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    network_mode: host
+    stdin_open: true
+    tty: true
+    # Ensure the container can access the display
+    privileged: false
+    # Run the launcher script instead of the game directly
+    command: ["python", "launcher.py"]
+
+  # Alternative service for just the game without terminal interface
+  game-only:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: game-of-life-simple
+    environment:
+      - DISPLAY=${DISPLAY}
+      - SDL_VIDEODRIVER=x11
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: ["python", "game_of_life_pygame.py"]
+    profiles:
+      - simple
+# Default service runs the full launcher with terminal interface
+# To run the simple version: docker-compose --profile simple up game-only
